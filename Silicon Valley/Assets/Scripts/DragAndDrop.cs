@@ -4,50 +4,33 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    bool canMove;
-    bool dragging;
-    Collider2D collider;
-    // Start is called before the first frame update
-    void Start()
+    public delegate void DragEndedDelegate(DragAndDrop draggableObject);
+
+    public DragEndedDelegate dragEndedCallBack;
+    private bool isDragged = false;
+    private Vector3 mouseDragStartPos;
+    private Vector3 spriteDragStartPos;
+
+    private void OnMouseDown()
     {
-        collider = GetComponent<Collider2D>();
-        canMove = false;
-        dragging = false;
+        isDragged = true;
+        mouseDragStartPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        spriteDragStartPos = transform.localPosition;
+    }
+    private void OnMouseDrag()
+    {
+        if (isDragged)
+        {
+            transform.localPosition = spriteDragStartPos + (Camera.main.ScreenToWorldPoint(Input.mousePosition) - mouseDragStartPos);
+        }
+
+    }
+    private void OnMouseUp()
+    {
+        isDragged = false;
+        dragEndedCallBack(this);
+       
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (collider == Physics2D.OverlapPoint(mousePos))
-            {
-                canMove = true;
-            }
-            else
-            {
-                canMove = false;
-            }
-
-            if (canMove)
-            {
-                dragging = true;
-            }
-        }
-
-        if (dragging)
-        {
-            this.transform.position = mousePos;
-
-
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            canMove = false;
-            dragging = false;
-        }
-            
-        
-    }
 }
+    
