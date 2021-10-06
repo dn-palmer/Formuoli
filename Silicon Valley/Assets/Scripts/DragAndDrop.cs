@@ -4,50 +4,58 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    bool canMove;
-    bool dragging;
-    Collider2D collider;
-    // Start is called before the first frame update
-    void Start()
-    {
-        collider = GetComponent<Collider2D>();
-        canMove = false;
-        dragging = false;
-    }
+    public GameObject objSelected = null;
+    public GameObject[] snapPoints;
+    private float snapSensitivity = 2.0f;
 
-    // Update is called once per frame
     void Update()
     {
-        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //object clicked on
         if (Input.GetMouseButtonDown(0))
         {
-            if (collider == Physics2D.OverlapPoint(mousePos))
-            {
-                canMove = true;
-            }
-            else
-            {
-                canMove = false;
-            }
-
-            if (canMove)
-            {
-                dragging = true;
-            }
+            CheckHitObject();
         }
-
-        if (dragging)
+        //drag an object 
+        if (Input.GetMouseButton(0) && objSelected != null)
         {
-            this.transform.position = mousePos;
-
-
+            DragObject();
         }
-        if (Input.GetMouseButtonUp(0))
+        //drop object
+        if (Input.GetMouseButtonUp(0) && objSelected != null)
         {
-            canMove = false;
-            dragging = false;
+            DropObject();
         }
-            
+
         
     }
+
+    void CheckHitObject()
+    {
+        RaycastHit2D hit2d = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
+        if (hit2d.collider != null)
+        {
+            objSelected = hit2d.transform.gameObject;
+        }
+      
+    }
+
+    
+     void DragObject()
+    {
+        objSelected.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.nearClipPlane + 10.0f));
+    }
+
+    void DropObject()
+    {
+        for (int i = 0; i < snapPoints.Length; i++)
+        {
+
+            if (Vector3.Distance(snapPoints[i].transform.position, objSelected.transform.position) < snapSensitivity)
+            {
+                objSelected.transform.position = new Vector3(snapPoints[i].transform.position.x + 0.3f , snapPoints[i].transform.position.y, snapPoints[i].transform.position.z - 0.1f);
+            }
+        }
+        objSelected = null;
+    }
+
 }
