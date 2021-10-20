@@ -66,7 +66,7 @@ public class TurnManager : MonoBehaviour
         if (phase2Flag == true)
         {
             log.text = "Phase 2";
-            //feed tokens when taking back tokens from board.
+            //feed tokens when taking back tokens from board
             players[playerTurn].feedTokens();
         }
 
@@ -145,8 +145,8 @@ public class Player
     public Player()
     {
         playerName = "Player";
-        currentTokenCount = 5;
-        totalTokenCount = 5;
+        currentTokenCount = 1;
+        totalTokenCount = 1;
         food = 8;
         resource1 = 15;
         resource2 = 0;
