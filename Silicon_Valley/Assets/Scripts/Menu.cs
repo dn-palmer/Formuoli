@@ -29,6 +29,11 @@ public class Menu : MonoBehaviour
     
     }
 
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
     public void SplashLoad()
     {
         SceneManager.LoadScene("WelcomeSplash");
