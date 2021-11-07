@@ -32,13 +32,13 @@ public class TurnManager : MonoBehaviour
         players = new Player[numOfPlayers];
 
         player1 = new Player();
-        player1.playerName = "Player 1";
+        player1.playerName = PlayerManager.instance.inputFields[0].text;
         player2 = new Player();
-        player2.playerName = "Player 2";
+        player2.playerName = PlayerManager.instance.inputFields[1].text;
         player3 = new Player();
-        player3.playerName = "Player 3";
+        player3.playerName = PlayerManager.instance.inputFields[2].text;
         player4 = new Player();
-        player4.playerName = "Player 4";
+        player4.playerName = PlayerManager.instance.inputFields[3].text;
 
         //starts a 4 player game
         PlayerGame4(players);
