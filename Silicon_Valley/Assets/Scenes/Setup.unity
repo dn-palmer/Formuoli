@@ -3042,6 +3042,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberOfPlayers: 0
+  inputFields:
+  - {fileID: 320199312}
+  - {fileID: 89955230}
+  - {fileID: 429340167}
+  - {fileID: 648761297}
 --- !u!4 &1312692408
 Transform:
   m_ObjectHideFlags: 0
