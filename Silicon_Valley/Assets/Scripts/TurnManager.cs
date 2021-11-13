@@ -10,12 +10,13 @@ public class TurnManager : MonoBehaviour
     public TextMeshProUGUI turnCountText;
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI log;
+    
     int totalCount;
     //used to separate token placement phase from second phase.
     int phase2Count;
-    int playerTurn;
+    public int playerTurn;
     bool phase2Flag;
-
+    
     public Player[] players;
     public Player player1;
     public Player player2;
@@ -26,19 +27,20 @@ public class TurnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         //Creates 4 new players
         numOfPlayers = PlayerManager.instance.numberOfPlayers;
         log.text = numOfPlayers.ToString();
         players = new Player[numOfPlayers];
 
         player1 = new Player();
-        player1.playerName = "Player 1";
+        player1.playerName = PlayerManager.instance.inputFields[0].text;
         player2 = new Player();
-        player2.playerName = "Player 2";
+        player2.playerName = PlayerManager.instance.inputFields[1].text;
         player3 = new Player();
-        player3.playerName = "Player 3";
+        player3.playerName = PlayerManager.instance.inputFields[2].text;
         player4 = new Player();
-        player4.playerName = "Player 4";
+        player4.playerName = PlayerManager.instance.inputFields[3].text;
 
         //starts a 4 player game
         PlayerGame4(players);
@@ -62,6 +64,7 @@ public class TurnManager : MonoBehaviour
     //for end turn button
     void TaskOnClick()
     {
+        
         log.text = "";
         if (phase2Flag == true)
         {

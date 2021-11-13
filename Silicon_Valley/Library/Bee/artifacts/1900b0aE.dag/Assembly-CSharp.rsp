@@ -323,6 +323,7 @@
 "Assets/Scripts/DragAndDrop.cs"
 "Assets/Scripts/Menu.cs"
 "Assets/Scripts/PlayerEntry.cs"
+"Assets/Scripts/PlayerInfoGUI.cs"
 "Assets/Scripts/PlayerManager.cs"
 "Assets/Scripts/SplashTimer.cs"
 "Assets/Scripts/TurnManager.cs"
