@@ -11,11 +11,11 @@ public class TurnManager : MonoBehaviour
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI log;
     
-    int totalCount;
+    public int totalCount;
     //used to separate token placement phase from second phase.
-    int phase2Count;
+    public int phase2Count;
     public int playerTurn;
-    bool phase2Flag;
+    public bool phase2Flag;
     
     public Player[] players;
     public Player player1;
@@ -62,7 +62,7 @@ public class TurnManager : MonoBehaviour
     }
 
     //for end turn button
-    void TaskOnClick()
+    public void TaskOnClick()
     {
         
         log.text = "";
@@ -96,7 +96,7 @@ public class TurnManager : MonoBehaviour
     }
 
     //Cycles through array to change who goes first each turn
-    void NewRound(Player[] arr)
+    public void NewRound(Player[] arr)
     {
         Player temp = arr[0];
         for (int i = 0; i <= arr.Length - 2; i++)
