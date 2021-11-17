@@ -45,19 +45,26 @@ public class PlayerInfoGUI : MonoBehaviour
     /// </summary>
     void SetGUI()
     {
-        var players = instance.players;
-        var currentPlayer = players[instance.playerTurn];
+        var players = instance.tm.players;
+        var currentPlayer = players[instance.tm.currentTurn];
 
-        playerName.SetText(currentPlayer.playerName);
-        numberOfDevelopers.SetText(currentPlayer.totalTokenCount.ToString());
-        numberOfDevelopers.SetText(currentPlayer.currentTokenCount.ToString());
-
-        coffee.SetText(currentPlayer.food.ToString());
+        playerName.SetText(currentPlayer.PlayerName);
+        numberOfDevelopers.SetText(currentPlayer.TotalTokenCount.ToString());
+        numberOfDevelopersRemaining.SetText(currentPlayer.CurrentTokenCount.ToString());
+        if (instance.tm.Phase2 == true)
+        {
+            instance.log.text = "Phase2";
+        }
+        else
+        {
+            instance.log.text = "Phase1";
+        }
+        coffee.SetText(currentPlayer.Coffee.ToString());
         //the resource variable names need to be changed
-        hardware.SetText(currentPlayer.resource1.ToString());
-        money.SetText(currentPlayer.resource1.ToString());
-        shippableCode.SetText(currentPlayer.resource1.ToString());
-        servers.SetText(currentPlayer.resource1.ToString());
+        hardware.SetText(currentPlayer.Hardware.ToString());
+        money.SetText(currentPlayer.Investors.ToString());
+        shippableCode.SetText(currentPlayer.ShippableCode.ToString());
+        servers.SetText(currentPlayer.Servers.ToString());
 
     }
 }

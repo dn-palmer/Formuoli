@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 
@@ -10,8 +11,6 @@ public class DragAndDrop : MonoBehaviour
     public GameObject[] snapPoints;
     private float snapSensitivity = 7.0f;
     public TextMeshProUGUI log;
-    public Player player1;
-    public TextMeshProUGUI playerText;
 
 
     void Update()
@@ -59,9 +58,6 @@ public class DragAndDrop : MonoBehaviour
             if (Vector3.Distance(snapPoints[i].transform.position, objSelected.transform.position) < snapSensitivity)
             {
                 objSelected.transform.position = new Vector3(snapPoints[i].transform.position.x + 0.3f , snapPoints[i].transform.position.y, snapPoints[i].transform.position.z - 0.1f);
-                log.text = "SNAPPED";
-                player1.currentTokenCount--;
-                playerText.text = player1.displayPlayerCard();
             }
         }
         objSelected = null;

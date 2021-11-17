@@ -12,9 +12,26 @@ namespace SiliconAgeLibrary
     {
         //More Properties which are also basic af
         public string PlayerName { get; set; }
-        public int TurnNumber { get; set; }
         public string PlayerThemeColor { get; set; }
+        public bool PiecesSet { get; set; }
 
+        public Player(string name)
+        {
+            PlayerName = name;
+            ShippableCode = 0;
+            Servers = 0;
+            Hardware = 0;
+            Investors = 0;
+            Coffee = 0;
+            TokenCount = 5;
+            PiecesSet = false;
+        }
 
+        public string DisplayResourceCard()
+        {
+            return $"Player: {PlayerName}\nCoffee: {Coffee}\nTokenCount: {TokenCount}\n" +
+                $"ShippableCode: {ShippableCode}\nServers: {Servers}\nHardware: {Hardware}\n" +
+                $"Investors: {Investors}\n";
+        }
     }
 }
