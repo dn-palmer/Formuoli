@@ -26,9 +26,15 @@ public class Server : MonoBehaviour
 
     void TaskOnClick()
     {
-
-        instance.tm.players[instance.tm.currentTurn].TokensSet++; ;
-        instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on server";
-        instance.tm.players[instance.tm.currentTurn].TokenEvent = "Server";
+        if (instance.tm.players[instance.tm.currentTurn].TokensSet == instance.tm.players[instance.tm.currentTurn].CurrentTokenCount)
+        {
+            instance.eventLog.text += $"\nNo tokens left to set";
+        }
+        else
+        {
+            instance.tm.players[instance.tm.currentTurn].TokensSet++;
+            instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on server";
+            instance.tm.players[instance.tm.currentTurn].TokenEvent = "Server";
+        }
     }
 }

@@ -25,9 +25,15 @@ public class Hardware : MonoBehaviour
     }
     void TaskOnClick()
     {
-
-        instance.tm.players[instance.tm.currentTurn].TokensSet++; ;
-        instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on Hardware";
-        instance.tm.players[instance.tm.currentTurn].TokenEvent = "Hardware";
+        if (instance.tm.players[instance.tm.currentTurn].TokensSet == instance.tm.players[instance.tm.currentTurn].CurrentTokenCount)
+        {
+            instance.eventLog.text += $"\nNo tokens left to set";
+        }
+        else
+        {
+            instance.tm.players[instance.tm.currentTurn].TokensSet++;
+            instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on hardware";
+            instance.tm.players[instance.tm.currentTurn].TokenEvent = "Hardware";
+        }
     }
 }

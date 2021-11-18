@@ -46,7 +46,11 @@ public class TurnManager : MonoBehaviour
     void TaskOnClickConfirm()
     {
         //Subtract tokens from player
-        if (tm.Phase2 == false)
+        if (tm.players[tm.currentTurn].CurrentTokenCount == 0 && tm.Phase2 == false)
+        {
+            eventLog.text = "No tokens to place. Go to next turn";
+        }
+        else if (tm.Phase2 == false)
         {
             //tm.players[tm.currentTurn].CurrentTokenCount -= 5;
             //tm.players[tm.currentTurn].PiecesSet = true;
@@ -109,7 +113,6 @@ public class TurnManager : MonoBehaviour
             tm.totalTurn++;
         }
 
-        
 
 
 

@@ -27,8 +27,15 @@ public class Coffee : MonoBehaviour
     void TaskOnClick()
     {
 
-        instance.tm.players[instance.tm.currentTurn].TokensSet++; ;
-        instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on coffee";
-        instance.tm.players[instance.tm.currentTurn].TokenEvent = "Coffee";
+        if (instance.tm.players[instance.tm.currentTurn].TokensSet == instance.tm.players[instance.tm.currentTurn].CurrentTokenCount)
+        {
+            instance.eventLog.text = $"No tokens left to set";
+        }
+        else
+        {
+            instance.tm.players[instance.tm.currentTurn].TokensSet++;
+            instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on coffee";
+            instance.tm.players[instance.tm.currentTurn].TokenEvent = "Coffee";
+        }
     }
 }
