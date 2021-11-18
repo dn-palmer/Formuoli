@@ -23,6 +23,9 @@ public class TurnManager : MonoBehaviour
     public Player player3;
     public Player player4;
 
+    //May pop into their own classes and the like not sure yet.
+    public GameObject staffTokens;
+
     public int numOfPlayers;
     // Start is called before the first frame update
     void Start()
@@ -59,6 +62,7 @@ public class TurnManager : MonoBehaviour
     void Update()
     {
         //i assume include drag and drop updating here but also could just use a second button to confirm drag and drop changes 
+       // turnCountText.text = $"Turn {totalCount}";
     }
 
     //for end turn button
@@ -126,8 +130,20 @@ public class TurnManager : MonoBehaviour
         arr[1] = player2;
         arr[2] = player3;
         arr[3] = player4;
+        Populate(player1);
     }
 
+
+    void Populate(Player player)
+    {
+        for (int i = 0; i < player.currentTokenCount; i++)
+        {
+           //Debug.Log("Hey im running");
+           GameObject token = Instantiate(staffTokens, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+            token.transform.SetParent(GameObject.Find("PlayerTokenHolder").transform, false);
+
+        }
+    }
 
 
 }
@@ -148,8 +164,8 @@ public class Player
     public Player()
     {
         playerName = "Player";
-        currentTokenCount = 1;
-        totalTokenCount = 1;
+        currentTokenCount = 5;
+        totalTokenCount = 5;
         food = 8;
         resource1 = 15;
         resource2 = 0;
