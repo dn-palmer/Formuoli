@@ -17,14 +17,12 @@ public class PlayerInfoGUI : MonoBehaviour
     public TextMeshProUGUI money;
     public TextMeshProUGUI shippableCode;
     public TextMeshProUGUI servers;
+    public TextMeshProUGUI tools;
  
 
 
     private TurnManager instance;
-    
-    
-    
-    
+
     void Start()
     {
 
@@ -53,11 +51,11 @@ public class PlayerInfoGUI : MonoBehaviour
         numberOfDevelopersRemaining.SetText(currentPlayer.CurrentTokenCount.ToString());
         if (instance.tm.Phase2 == true)
         {
-            instance.log.text = "Phase2";
+            instance.log.text = $"Phase2. Press confirm to run events.";
         }
         else
         {
-            instance.log.text = "Phase1";
+            instance.log.text = "Phase1. Press confirm to place pieces";
         }
         coffee.SetText(currentPlayer.Coffee.ToString());
         //the resource variable names need to be changed
@@ -65,6 +63,7 @@ public class PlayerInfoGUI : MonoBehaviour
         money.SetText(currentPlayer.Investors.ToString());
         shippableCode.SetText(currentPlayer.ShippableCode.ToString());
         servers.SetText(currentPlayer.Servers.ToString());
+        tools.SetText(currentPlayer.DisplayTools());
 
     }
 }

@@ -12,7 +12,8 @@ namespace SiliconAgeLibrary
         public double Investors { get; set; }
         public double Coffee { get; set; }
         public double CurrentTokenCount { get; set; }
-        public double TotalTokenCount {get;set;}
+        public double TotalTokenCount { get; set; }
+        public Tools ToolCol { get; set; }
 
         //DP: Adds or Subtracts resources. If a True is sent along with the the number that is being add/subtracted the number will be added but if it is
         //false the program will subtract the number.
@@ -27,8 +28,8 @@ namespace SiliconAgeLibrary
             {
                 Coffee -= coffee;
             }
-            
-  
+
+
         }
 
         public void ServersUpdate(bool add, double servers)
@@ -41,7 +42,7 @@ namespace SiliconAgeLibrary
             {
                 Servers -= servers;
             }
-           
+
         }
         public void HardwareUpdate(bool add, double hardware)
         {
@@ -53,7 +54,7 @@ namespace SiliconAgeLibrary
             {
                 Hardware -= hardware;
             }
-            
+
         }
         public void CurentTokensUpdate(bool add, double tokens)
         {
@@ -65,8 +66,8 @@ namespace SiliconAgeLibrary
             {
                 CurrentTokenCount -= tokens;
             }
-            
-        } 
+
+        }
         public void TotalTokensUpdate(bool add, double tokens)
         {
             if (add)
@@ -77,7 +78,7 @@ namespace SiliconAgeLibrary
             {
                 TotalTokenCount -= tokens;
             }
-            
+
         }
         public void ShippableCodeUpdate(bool add, double code)
         {
@@ -89,7 +90,7 @@ namespace SiliconAgeLibrary
             {
                 ShippableCode -= code;
             }
-            
+
         }
 
         public void InvestorsUpdate(bool add, double investors)
@@ -102,14 +103,55 @@ namespace SiliconAgeLibrary
             {
                 Investors -= investors;
             }
-            
+
         }
 
-       
+
 
         //DP:Still need to implement something for those dang cards.
 
 
     }
 
+
+    public class Tool{
+        public int Value { get; set; }
+        public bool Active { get; set; }
+
+        public Tool(int value, bool active)
+        {
+            Value = value;
+            Active = active;
+        }
+     }
+
+    public class Tools
+    {
+        public int ToolCount { get; set; }
+        public int CurrentValue { get; set; }
+        public Tool[] ToolArr { get; set; }
+        public Tools()
+        {
+            ToolArr = new Tool[3];
+            CurrentValue = 1;
+            ToolCount = 0;
+            for (int i = 0; i < 3; i++)
+            {
+                ToolArr[i] = new Tool(0, true);
+            }
+        }
+
+        public int getMax()
+        {
+            int max = 0;
+            foreach (Tool t in ToolArr)
+            {
+                if (t.Value > max)
+                {
+                    max = t.Value;
+                }
+            }
+            return max;
+        }
+    }
 }

@@ -58,6 +58,7 @@ public class DragAndDrop : MonoBehaviour
             if (Vector3.Distance(snapPoints[i].transform.position, objSelected.transform.position) < snapSensitivity)
             {
                 objSelected.transform.position = new Vector3(snapPoints[i].transform.position.x + 0.3f , snapPoints[i].transform.position.y, snapPoints[i].transform.position.z - 0.1f);
+
             }
         }
         objSelected = null;

@@ -86,6 +86,10 @@ namespace SiliconAgeLibrary
         {
             p.PiecesSet = false;
             p.CurrentTokenCount = p.TotalTokenCount;
+            p.EventLog = "";
+            p.TokensSet = 0;
+            p.EventQueue.Clear();
+            p.TokenQueue.Clear();
         }
     }
 }
