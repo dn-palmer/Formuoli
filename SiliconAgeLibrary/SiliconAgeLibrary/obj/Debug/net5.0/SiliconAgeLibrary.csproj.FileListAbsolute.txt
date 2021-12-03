@@ -1,0 +1,12 @@
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\bin\Debug\net5.0\SiliconAgeLibrary.deps.json
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\bin\Debug\net5.0\SiliconAgeLibrary.dll
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\bin\Debug\net5.0\ref\SiliconAgeLibrary.dll
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\bin\Debug\net5.0\SiliconAgeLibrary.pdb
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.csproj.AssemblyReference.cache
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.AssemblyInfoInputs.cache
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.AssemblyInfo.cs
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.dll
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\ref\SiliconAgeLibrary.dll
+C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.pdb
