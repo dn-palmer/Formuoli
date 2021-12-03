@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Console
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -39,19 +39,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1496
+    x: 1612
     y: 0
-    width: 424
+    width: 308
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
   - {fileID: 13}
   - {fileID: 12}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 2
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -73,10 +73,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 17
+  controlID: 57
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -94,10 +94,10 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 274
-    height: 621
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+    width: 315
+    height: 661
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -113,23 +113,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 621
-    width: 1496
-    height: 326
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 18}
+    y: 661
+    width: 1612
+    height: 286
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,12 +220,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1496
+    width: 1612
     height: 947
-  m_MinSize: {x: 403, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18
+  controlID: 58
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -245,12 +245,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1496
-    height: 621
+    width: 1612
+    height: 661
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 59
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,10 +266,10 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 274
+    x: 315
     y: 0
-    width: 1222
-    height: 621
+    width: 1297
+    height: 661
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 17}
@@ -298,13 +298,13 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1496
+    x: 1610
     y: 73
-    width: 423
+    width: 309
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_Spl:
-    ID: 163
+    ID: 152
     splitterInitialOffset: 530
     currentActiveSplitter: -1
     realSizes:
@@ -347,305 +347,12 @@ MonoBehaviour:
       categories: []
       parentId: 
       parentUniqueId: 
-    - id: 1017
-      uniqueId: '[PlayMode][C:/Users/quite/Documents/GitHub/Formuoli/Silicon_Valley/Library/ScriptAssemblies/PlayMode.dll][suite]'
-      name: PlayMode.dll
-      fullName: C:/Users/quite/Documents/GitHub/Formuoli/Silicon_Valley/Library/ScriptAssemblies/PlayMode.dll
-      resultStatus: 0
-      duration: 0
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1000
-      parentUniqueId: '[Silicon_Valley][suite]'
-    - id: 1001
-      uniqueId: PlayMode.dll/[PlayMode][MenuTest][suite]
-      name: MenuTest
-      fullName: MenuTest
-      resultStatus: 1
-      duration: 0.5272175
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1006
-      parentUniqueId: '[PlayMode][C:/Users/johnathangraybeal/Documents/repos/Formuoli/Silicon_Valley/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1004
-      uniqueId: PlayMode.dll/MenuTest/[PlayMode][MenuTest.TestCredits]
-      name: TestCredits
-      fullName: MenuTest.TestCredits
-      resultStatus: 1
-      duration: 0.3163467
-      messages: 
-      output: 'credits
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: PlayMode.dll/[PlayMode][MenuTest][suite]
-    - id: 1002
-      uniqueId: PlayMode.dll/MenuTest/[PlayMode][MenuTest.TestNewGame]
-      name: TestNewGame
-      fullName: MenuTest.TestNewGame
-      resultStatus: 1
-      duration: 0.0769858
-      messages: 
-      output: 'newgame
-
-        NewGameBtn (UnityEngine.UI.Button)
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: PlayMode.dll/[PlayMode][MenuTest][suite]
-    - id: 1003
-      uniqueId: PlayMode.dll/MenuTest/[PlayMode][MenuTest.TestTutorial]
-      name: TestTutorial
-      fullName: MenuTest.TestTutorial
-      resultStatus: 1
-      duration: 0.0971983
-      messages: 
-      output: 'tutorial
-
-'
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1001
-      parentUniqueId: PlayMode.dll/[PlayMode][MenuTest][suite]
-    - id: 1007
-      uniqueId: PlayMode.dll/[PlayMode][SetUpTest][suite]
-      name: SetUpTest
-      fullName: SetUpTest
-      resultStatus: 1
-      duration: 0.5600863
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1009
-      parentUniqueId: '[PlayMode][C:/Users/johnathangraybeal/Documents/repos/Formuoli/Silicon_Valley/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1010
-      uniqueId: PlayMode.dll/SetUpTest/[PlayMode][SetUpTest.TestMainMenu]
-      name: TestMainMenu
-      fullName: SetUpTest.TestMainMenu
-      resultStatus: 1
-      duration: 0.2365746
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: PlayMode.dll/[PlayMode][SetUpTest][suite]
-    - id: 1009
-      uniqueId: PlayMode.dll/SetUpTest/[PlayMode][SetUpTest.TestPlayerCount]
-      name: TestPlayerCount
-      fullName: SetUpTest.TestPlayerCount
-      resultStatus: 1
-      duration: 0.0945868
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: PlayMode.dll/[PlayMode][SetUpTest][suite]
-    - id: 1008
-      uniqueId: PlayMode.dll/SetUpTest/[PlayMode][SetUpTest.TestPlayerNames]
-      name: TestPlayerNames
-      fullName: SetUpTest.TestPlayerNames
-      resultStatus: 1
-      duration: 0.0984187
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: PlayMode.dll/[PlayMode][SetUpTest][suite]
-    - id: 1011
-      uniqueId: PlayMode.dll/SetUpTest/[PlayMode][SetUpTest.TestStartGame]
-      name: TestStartGame
-      fullName: SetUpTest.TestStartGame
-      resultStatus: 1
-      duration: 0.0988477
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1007
-      parentUniqueId: PlayMode.dll/[PlayMode][SetUpTest][suite]
-    - id: 1010
-      uniqueId: PlayMode.dll/[PlayMode][TurnManagerTest][suite]
-      name: TurnManagerTest
-      fullName: TurnManagerTest
-      resultStatus: 1
-      duration: 0.6974494
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 1
-      categories: []
-      parentId: 1013
-      parentUniqueId: '[PlayMode][C:/Users/johnathangraybeal/Documents/repos/Formuoli/Silicon_Valley/Library/ScriptAssemblies/PlayMode.dll][suite]'
-    - id: 1014
-      uniqueId: PlayMode.dll/TurnManagerTest/[PlayMode][TurnManagerTest.TestEndTurn]
-      name: TestEndTurn
-      fullName: TurnManagerTest.TestEndTurn
-      resultStatus: 1
-      duration: 0.165637
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: PlayMode.dll/[PlayMode][TurnManagerTest][suite]
-    - id: 1016
-      uniqueId: PlayMode.dll/TurnManagerTest/[PlayMode][TurnManagerTest.TestFeedTokens]
-      name: TestFeedTokens
-      fullName: TurnManagerTest.TestFeedTokens
-      resultStatus: 1
-      duration: 0.0985635
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: PlayMode.dll/[PlayMode][TurnManagerTest][suite]
-    - id: 1015
-      uniqueId: PlayMode.dll/TurnManagerTest/[PlayMode][TurnManagerTest.TestNewRound]
-      name: TestNewRound
-      fullName: TurnManagerTest.TestNewRound
-      resultStatus: 1
-      duration: 0.0989769
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: PlayMode.dll/[PlayMode][TurnManagerTest][suite]
-    - id: 1011
-      uniqueId: PlayMode.dll/TurnManagerTest/[PlayMode][TurnManagerTest.TestNumberOfPlayers]
-      name: TestNumberOfPlayers
-      fullName: TurnManagerTest.TestNumberOfPlayers
-      resultStatus: 1
-      duration: 0.099143
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: PlayMode.dll/[PlayMode][TurnManagerTest][suite]
-    - id: 1012
-      uniqueId: PlayMode.dll/TurnManagerTest/[PlayMode][TurnManagerTest.TestPlayersCreated]
-      name: TestPlayersCreated
-      fullName: TurnManagerTest.TestPlayersCreated
-      resultStatus: 1
-      duration: 0.0992531
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: PlayMode.dll/[PlayMode][TurnManagerTest][suite]
-    - id: 1013
-      uniqueId: PlayMode.dll/TurnManagerTest/[PlayMode][TurnManagerTest.TestPlayersHaveName]
-      name: TestPlayersHaveName
-      fullName: TurnManagerTest.TestPlayersHaveName
-      resultStatus: 1
-      duration: 0.0989765
-      messages: 
-      output: 
-      stacktrace: 
-      notRunnable: 0
-      ignoredOrSkipped: 0
-      description: 
-      isSuite: 0
-      categories:
-      - Uncategorized
-      parentId: 1010
-      parentUniqueId: PlayMode.dll/[PlayMode][TurnManagerTest][suite]
-    m_ResultText: TestNewRound (0.099s)
+    m_ResultText: 
     m_ResultStacktrace: 
     m_TestListState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7c91e693
-      m_LastClickedID: -1813606020
+      m_SelectedIDs: 
+      m_LastClickedID: 0
       m_ExpandedIDs: 21a1a984a805b3c12c6faacb73797fe10a3996012f1c0f2affffff7f
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -744,10 +451,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1496
-    y: 73
-    width: 423
-    height: 926
+    x: 1466
+    y: 72
+    width: 453
+    height: 927
   m_ViewDataDictionary: {fileID: 0}
   m_PosLeft: {x: 0, y: 0}
   m_PosRight: {x: 0, y: 0}
@@ -756,8 +463,8 @@ MonoBehaviour:
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 15b3a847
-    m_LastClickedID: 1202238229
+    m_SelectedIDs: 01f6b9f2
+    m_LastClickedID: -222693887
     m_ExpandedIDs: a01a5fa600000000c53aba5a
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -798,7 +505,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 734
-    width: 1495
+    width: 1611
     height: 265
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -822,14 +529,14 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\quite\Documents\GitHub\Formuoli\Silicon_Valley
+  m_LastProjectPath: C:\Users\quite\Desktop\Formuoli-TurnOrder\Formuoli-TurnOrder\Silicon_Valley
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: b6550000
-    m_LastClickedID: 21942
-    m_ExpandedIDs: 00000000b8550000ba550000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: b0560000
+    m_LastClickedID: 22192
+    m_ExpandedIDs: 00000000b0560000b2560000b4560000b6560000b8560000ba560000bc560000be560000c0560000c2560000c4560000c6560000c8560000ca560000cc560000ce560000d0560000d2560000d4560000d6560000d8560000da560000dc560000de560000e0560000e2560000e4560000e6560000e8560000ea56000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -857,7 +564,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000b8550000ba550000
+    m_ExpandedIDs: 00000000b0560000b2560000b4560000b6560000b8560000ba560000bc560000be560000c0560000c2560000c4560000c6560000c8560000ca560000cc560000ce560000d0560000d2560000d4560000d6560000d8560000da560000dc560000de560000e0560000e2560000e4560000e6560000e8560000ea560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -884,7 +591,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000de66000036590000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -933,9 +640,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1496
+    x: 1612
     y: 73
-    width: 423
+    width: 307
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
@@ -973,15 +680,15 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 73
-    width: 273
-    height: 600
+    width: 314
+    height: 640
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 54fbffff
+      m_ExpandedIDs: e0faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1025,10 +732,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 274
+    x: 315
     y: 73
-    width: 1220
-    height: 600
+    width: 1295
+    height: 640
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: cc27987af1a868c49b0894db9c0f5429
@@ -1041,9 +748,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 659.2372, y: 316.01895, z: -1644.6826}
+    m_Target: {x: 353.06958, y: 329.17792, z: 177.97578}
     speed: 2
-    m_Value: {x: 670.9216, y: 320.19336, z: -1643.7606}
+    m_Value: {x: 353.06958, y: 329.17792, z: 177.97578}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1094,9 +801,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 244.5776
+    m_Target: 416.29007
     speed: 2
-    m_Value: 256.1022
+    m_Value: 416.29007
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1142,9 +849,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 694
-    width: 1495
-    height: 305
+    y: 734
+    width: 1611
+    height: 265
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &19
 MonoBehaviour:
@@ -1166,9 +873,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 274
+    x: 315
     y: 73
-    width: 1220
+    width: 1295
     height: 640
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames:
@@ -1179,7 +886,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 1220, y: 619}
+  m_TargetSize: {x: 1295, y: 619}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -1194,10 +901,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -610
-    m_HBaseRangeMax: 610
-    m_VBaseRangeMin: -320
-    m_VBaseRangeMax: 320
+    m_HBaseRangeMin: -647.5
+    m_HBaseRangeMax: 647.5
+    m_VBaseRangeMin: -309.5
+    m_VBaseRangeMax: 309.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -1214,24 +921,24 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
-      width: 1220
-      height: 640
+      y: 21
+      width: 1295
+      height: 619
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 610, y: 320}
+    m_Translation: {x: 647.5, y: 309.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -610
-      y: -320
-      width: 1220
-      height: 640
+      x: -647.5
+      y: -309.5
+      width: 1295
+      height: 619
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1220, y: 640}
+  m_LastWindowPixelSize: {x: 1295, y: 640}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
