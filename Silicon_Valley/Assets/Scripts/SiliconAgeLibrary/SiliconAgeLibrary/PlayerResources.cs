@@ -14,6 +14,7 @@ namespace SiliconAgeLibrary
         public double CurrentTokenCount { get; set; }
         public double TotalTokenCount { get; set; }
         public Tools ToolCol { get; set; }
+        public int Points { get; set; }
 
         //DP: Adds or Subtracts resources. If a True is sent along with the the number that is being add/subtracted the number will be added but if it is
         //false the program will subtract the number.
@@ -104,6 +105,18 @@ namespace SiliconAgeLibrary
                 Investors -= investors;
             }
 
+        }
+
+        public void PointsUpdate(bool add, double points)
+        {
+            if (add)
+            {
+                Points += Points;
+            }
+            else
+            {
+                Points -= Points;
+            }
         }
 
 
