@@ -12,9 +12,9 @@ public class Field : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        instance = script.GetComponent<TurnManager>();
-        Button btn = fieldBtn.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        //instance = script.GetComponent<TurnManager>();
+        //Button btn = fieldBtn.GetComponent<Button>();
+        //btn.onClick.AddListener(TaskOnClick);
     }
 
     void TaskOnClick()

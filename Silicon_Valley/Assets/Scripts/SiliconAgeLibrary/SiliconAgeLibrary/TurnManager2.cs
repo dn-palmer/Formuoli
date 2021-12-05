@@ -35,7 +35,7 @@ namespace SiliconAgeLibrary
             players = new Player[4];
             PlayerGame4();
         }
-
+        
         public void PlayerGame4()
         {
             players[0] = player1;
