@@ -65,6 +65,15 @@ namespace SiliconAgeLibrary
                     case "Field":
                         AgReturn(player);
                         break;
+                    case "CivCard1":
+                        CardReturn(player);
+                        break;
+                    case "CivCard2":
+                        CardReturn(player);
+                        break;
+                    case "CivCard3":
+                        CardReturn(player);
+                        break;
 
 
                 }
@@ -190,6 +199,11 @@ namespace SiliconAgeLibrary
         {
             p.AgCount++;
             p.EventLog += $"Field Count is now {p.AgCount}";
+        }
+
+        public void CardReturn(Player p)
+        {
+            p.EventLog += "Aquired new Civilization Card";
         }
     }
 }
