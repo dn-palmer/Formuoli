@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using UnityEngine;
 
 namespace SiliconAgeLibrary
 {
@@ -12,9 +15,11 @@ namespace SiliconAgeLibrary
         public int HardWareCost { get; set; }
         public int ServerCost { get; set; }
         public int InvestorCost { get; set; }
+        public Guid Guid { get; set; } = Guid.NewGuid();
         public Effect Effect;
         public List<Effect> Effects { get; set; }
-        private Random rng = new Random();
+        public string DisplayText;
+        private System.Random rng = new System.Random();
 
 
         public Card()
@@ -24,19 +29,18 @@ namespace SiliconAgeLibrary
 
         public void SetCosts()
         {
-            int[] cost = new int[4];
-            Random rnd = new Random();
-            for (int i = 0; i < 4; i++)
-            {
-                cost[i] = rnd.Next(0, 4);
-            }
-            CodeCost = cost[0];
-            HardWareCost = cost[1];
-            ServerCost = cost[2];
-            InvestorCost = cost[3];
+            
+            
+            CodeCost = UnityEngine.Random.Range(0, 6);
+            HardWareCost = UnityEngine.Random.Range(0, 6);
+            ServerCost = UnityEngine.Random.Range(0, 6);
+            InvestorCost = UnityEngine.Random.Range(0, 6);
 
         }
 
+        /// <summary>
+        /// there is a set number of cards with each effect so set them according to that count
+        /// </summary>
         public void SetEffects()
         {
             Effects = new List<Effect>();
@@ -87,17 +91,20 @@ namespace SiliconAgeLibrary
 
        
 
+        /// <summary>
+        /// Shuffle effects around
+        /// </summary>
         public void ShuffleEffects()
         {
             
-            Effects = Effects.OrderBy(a => rng.Next()).ToList();
+            Effects = Effects.OrderBy(e => rng.Next()).ToList();
         }
 
         
 
         public void FoodEffect(Player player)//player recieves random coffee value then reset it back
         {
-           var amount =  rng.Next(1, 3);
+           var amount =  rng.Next(1, 7);
            player.CoffeeUpdate(true, amount);
           
         }
@@ -110,7 +117,7 @@ namespace SiliconAgeLibrary
         public void ResourcesEffect(Player player)//gain random amount of a resource
         {
             var randomResource = rng.Next(0, 4);
-            var amount = rng.Next(1, 4);
+            var amount = rng.Next(1, 7);
             switch (randomResource)
             {
                 case 0:
@@ -210,12 +217,15 @@ namespace SiliconAgeLibrary
 
         }
 
+        /// <summary>
+        /// if the cost is greater than 1 for any resource reduce it by 1
+        /// </summary>
         public void ReduceCost()
         {
-            if (CodeCost > 0) CodeCost--;
-            if (HardWareCost > 0) HardWareCost--;
-            if (ServerCost > 0) ServerCost--;
-            if (InvestorCost > 0) InvestorCost--;
+            if (CodeCost > 1) CodeCost--;
+            if (HardWareCost > 1) HardWareCost--;
+            if (ServerCost > 1) ServerCost--;
+            if (InvestorCost > 1) InvestorCost--;
         }
 
 
