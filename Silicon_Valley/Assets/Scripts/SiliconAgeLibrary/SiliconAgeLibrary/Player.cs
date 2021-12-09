@@ -21,6 +21,9 @@ namespace SiliconAgeLibrary
         public Queue<int> TokenQueue { get; set; }
         public string EventLog { get; set; }
         public int AgCount { get; set; }
+        public bool ToolFlag { get; set; }
+        public bool UseTool { get; set; }
+        public int CurrentToolValue { get; set; }
         
 
         public Player(string name)
@@ -41,6 +44,9 @@ namespace SiliconAgeLibrary
             EventLog = "";
             EventQueue = new Queue<string>();
             TokenQueue = new Queue<int>();
+            ToolFlag = false;
+            UseTool = false;
+            CurrentToolValue = 0;
         }
 
         public string DisplayResourceCard()
@@ -48,6 +54,27 @@ namespace SiliconAgeLibrary
             return $"Player: {PlayerName}\nCoffee: {Coffee}\nTokenCount: {CurrentTokenCount}/{TotalTokenCount}\n" +
                 $"ShippableCode: {ShippableCode}\nServers: {Servers}\nHardware: {Hardware}\n" +
                 $"Investors: {Investors}\n";
+        }
+
+        public int ToolSelect(int tool)
+        {
+            int count = 0;
+            count = this.ToolCol.ToolArr[tool].Value;
+            return count;
+        }
+
+        public void GetToolValue()
+        {
+            foreach (Tool t in this.ToolCol.ToolArr)
+            {
+                if (t.Active == true)
+                {
+                    this.CurrentToolValue = this.ToolCol.CurrentValue;
+                    //t.Active = false;
+                    this.UseTool = true;
+                    break;
+                }
+            }
         }
 
         public string DisplayTools()

@@ -19,8 +19,15 @@ public class Field : MonoBehaviour
 
     void TaskOnClick()
     {
-        instance.tm.players[instance.tm.currentTurn].TokensSet++; ;
-        instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on field";
-        instance.tm.players[instance.tm.currentTurn].TokenEvent = "Field";
+        if (instance.tm.players[instance.tm.currentTurn].TokensSet == 1)
+        {
+            instance.eventLog.text += $"\nNo tokens left to set";
+        }
+        else
+        {
+            instance.tm.players[instance.tm.currentTurn].TokensSet++;
+            instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on field";
+            instance.tm.players[instance.tm.currentTurn].TokenEvent = "Field";
+        }
     }
 }

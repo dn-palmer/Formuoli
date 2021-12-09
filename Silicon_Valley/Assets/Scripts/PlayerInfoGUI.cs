@@ -51,10 +51,21 @@ public class PlayerInfoGUI : MonoBehaviour
         numberOfDevelopersRemaining.SetText(currentPlayer.CurrentTokenCount.ToString());
         if (instance.tm.Phase2 == true)
         {
-            instance.log.text = $"Phase2. Press confirm to run events.";
+            instance.useToolBtn.gameObject.SetActive(true);
+
+            instance.log.text = $"Phase2. Press confirm to run events. {currentPlayer.EventQueue.Count} events left.";
+            if (currentPlayer.EventQueue.Count > 0)
+            {
+                instance.log.text += $"\n Next Event: {currentPlayer.EventQueue.Peek()}.";
+            }
+            if(currentPlayer.ToolFlag == true)
+            {
+                instance.log.text += $"\n\n You have a tool. Would you like to use it?";
+            }
         }
         else
         {
+            instance.useToolBtn.gameObject.SetActive(false);
             instance.log.text = "Phase1. Press confirm to place pieces";
         }
         coffee.SetText(currentPlayer.Coffee.ToString());

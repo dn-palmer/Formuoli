@@ -10,3 +10,10 @@ C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj
 C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.dll
 C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\ref\SiliconAgeLibrary.dll
 C:\Users\quite\Documents\GitHub\Formuoli\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.pdb
+C:\Users\chris\Documents\GitHub\Formuoli\Silicon_Valley\Assets\Scripts\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.csproj.AssemblyReference.cache
+C:\Users\chris\Documents\GitHub\Formuoli\Silicon_Valley\Assets\Scripts\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\chris\Documents\GitHub\Formuoli\Silicon_Valley\Assets\Scripts\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.AssemblyInfoInputs.cache
+C:\Users\chris\Documents\GitHub\Formuoli\Silicon_Valley\Assets\Scripts\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.AssemblyInfo.cs
+C:\Users\chris\Documents\GitHub\Formuoli\Silicon_Valley\Assets\Scripts\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.csproj.CoreCompileInputs.cache
+C:\Users\chris\Documents\GitHub\Formuoli\Silicon_Valley\Assets\Scripts\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.dll
+C:\Users\chris\Documents\GitHub\Formuoli\Silicon_Valley\Assets\Scripts\SiliconAgeLibrary\SiliconAgeLibrary\obj\Debug\net5.0\SiliconAgeLibrary.pdb

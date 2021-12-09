@@ -26,8 +26,15 @@ public class Hut : MonoBehaviour
 
     void TaskOnClick()
     {
-        instance.eventLog.text = "2 tokens to set on hut";
-        instance.tm.players[instance.tm.currentTurn].TokensSet+= 2;
-        instance.tm.players[instance.tm.currentTurn].TokenEvent = "Hut";
+        if (instance.tm.players[instance.tm.currentTurn].TokensSet == 2)
+        {
+            instance.eventLog.text += $"\nNo tokens left to set";
+        }
+        else
+        {
+            instance.tm.players[instance.tm.currentTurn].TokensSet += 2;
+            instance.eventLog.text = $"{instance.tm.players[instance.tm.currentTurn].TokensSet} token/tokens to set on hut";
+            instance.tm.players[instance.tm.currentTurn].TokenEvent = "Hut";
+        }
     }
 }

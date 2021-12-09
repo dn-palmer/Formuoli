@@ -9,6 +9,7 @@ public class TurnManager : MonoBehaviour
 {
     public Button endTurn;
     public Button confirmBtn;
+    public Button useToolBtn;
     public TextMeshProUGUI turnCountText;
     public TextMeshProUGUI playerText;
     public TextMeshProUGUI log;
@@ -28,8 +29,11 @@ public class TurnManager : MonoBehaviour
         //end turn button
         //Button confirm = confirmBtn.GetComponent<Button>();
         Button btn = endTurn.GetComponent<Button>();
+        Button toolBtn = useToolBtn.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         confirmBtn.onClick.AddListener(TaskOnClickConfirm);
+        toolBtn.onClick.AddListener(TaskOnClickTool);
+        toolBtn.gameObject.SetActive(false);
         //turnCountText.text = "Turn 0";
     }
 
@@ -45,16 +49,11 @@ public class TurnManager : MonoBehaviour
     //For confirm button
     void TaskOnClickConfirm()
     {
+
         //Subtract tokens from player
         if (tm.Phase2 == false)
         {
-            //tm.players[tm.currentTurn].CurrentTokenCount -= 5;
-            //tm.players[tm.currentTurn].PiecesSet = true;
-            //tm.Phase2 = tm.CheckPhase(tm.players);
-            //if (tm.Phase2 == true)
-            //{
-            //    tm.currentTurn = tm.Phase2Turn;
-            //}
+
             tm.players[tm.currentTurn].EventQueue.Enqueue(tm.players[tm.currentTurn].TokenEvent);
             tm.players[tm.currentTurn].TokenQueue.Enqueue(tm.players[tm.currentTurn].TokensSet);
             tm.players[tm.currentTurn].CurrentTokenCount -= tm.players[tm.currentTurn].TokensSet;
@@ -72,10 +71,23 @@ public class TurnManager : MonoBehaviour
         }
         else
         {
-            gm.RunEvents(tm.players[tm.currentTurn]);
-            eventLog.text = $"{tm.players[tm.currentTurn].EventLog}";
-            gm.FeedTokens(tm.players[tm.currentTurn]);
-            tm.ResetPieces(tm.players[tm.currentTurn]);
+            if (tm.players[tm.currentTurn].EventQueue.Count == 0)
+            {
+                eventLog.text = $"There are no more tokens to return";
+            }
+            else
+            {
+                gm.RunEvent(tm.players[tm.currentTurn]);
+                eventLog.text = $"{tm.players[tm.currentTurn].EventLog}";
+                if (tm.players[tm.currentTurn].EventQueue.Count == 0)
+                {
+                    gm.FeedTokens(tm.players[tm.currentTurn]);
+                    tm.ResetPieces(tm.players[tm.currentTurn]);
+                    eventLog.text += $"\nThere are no more tokens to return";
+                }
+
+            }
+
 
         }
 
@@ -109,9 +121,11 @@ public class TurnManager : MonoBehaviour
             tm.totalTurn++;
         }
 
-        
+    }
 
-
-
+    void TaskOnClickTool()
+    {
+        tm.players[tm.currentTurn].GetToolValue();
+        eventLog.text = $"Tool with value of {tm.players[tm.currentTurn].CurrentToolValue} added to resource";
     }
 }

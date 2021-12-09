@@ -80,6 +80,62 @@ namespace SiliconAgeLibrary
             }
         }
 
+        public void RunEvent(Player player)
+        {
+            int j = player.EventQueue.Count();
+            if (player.EventQueue.Peek() != null)
+            {
+
+                string gameEvent = player.EventQueue.Dequeue();
+                int gameCount = player.TokenQueue.Dequeue();
+
+                if(player.UseTool == true)
+                {
+                    gameCount += player.ToolSelect(player.CurrentToolValue);
+                }
+
+                player.UseTool = false;
+                j--;
+
+                switch (gameEvent)
+                {
+                    case "Coffee":
+                        CoffeeReturn(player, gameCount);
+                        break;
+                    case "Hut":
+                        HutReturn(player);
+                        break;
+                    case "Server":
+                        ServerReturn(player, gameCount);
+                        break;
+                    case "Hardware":
+                        HardwareReturn(player, gameCount);
+                        break;
+                    case "Code":
+                        CodeReturn(player, gameCount);
+                        break;
+                    case "Investor":
+                        InvestorReturn(player, gameCount);
+                        break;
+                    case "Tool":
+                        ToolReturn(player);
+                        break;
+                    case "Field":
+                        AgReturn(player);
+                        break;
+                    case "CivCard1":
+                        CardReturn(player);
+                        break;
+                    case "CivCard2":
+                        CardReturn(player);
+                        break;
+                    case "CivCard3":
+                        CardReturn(player);
+                        break;
+                }
+            }
+        }
+
         public void HutReturn(Player player)
         {
             player.TotalTokenCount++;
@@ -194,6 +250,7 @@ namespace SiliconAgeLibrary
                 p.EventLog += $"New Sr. Dev {p.ToolCol.ToolArr[0].Value} added";
             }
         }
+
 
         public void AgReturn(Player p)
         {
